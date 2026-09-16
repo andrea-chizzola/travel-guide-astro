@@ -329,8 +329,15 @@ main, .wrap {
 
 .day-banner {
   position: relative;
-  overflow: hidden;
   height: 420px;
+}
+
+/* Inner clip wrapper — keeps the image zoomed within bounds
+   while allowing .day-badge to overflow below the banner */
+.banner-img-clip {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
 }
 
 .day-banner img {
@@ -354,6 +361,12 @@ main, .wrap {
   grid-template-columns: 1.4fr 1fr;
   gap: 4px;
   height: 420px;
+}
+
+/* In duo banners the clip wrappers are the grid children */
+.day-banner.duo .banner-img-clip {
+  position: relative;
+  inset: unset;
 }
 
 .day-banner.duo img { height: 100%; }
