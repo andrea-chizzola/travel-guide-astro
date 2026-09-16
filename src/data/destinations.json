@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "new-york",
+    "name": "New York",
+    "country": "Stati Uniti",
+    "continent": "Nord America",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/New_York_City_skyline.jpg/1600px-New_York_City_skyline.jpg",
+    "description": "La guida pensata per vivere Manhattan e i suoi quartieri iconici in 6 giornate indimenticabili.",
+    "status": "published",
+    "tags": ["metropoli", "skyline", "cibo", "musei", "iconica"]
+  },
+  {
+    "slug": "corea-del-sud",
+    "name": "Corea del Sud",
+    "country": "Corea del Sud",
+    "continent": "Asia",
+    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Gyeongbokgung_Palace_2023.jpg/1280px-Gyeongbokgung_Palace_2023.jpg",
+    "description": "Tra palazzi storici, street food e luci al neon. Guida in preparazione.",
+    "status": "coming-soon",
+    "tags": ["cultura", "k-pop", "cibo", "seul", "storia"]
+  }
+]
