@@ -834,3 +834,54 @@ main, .wrap {
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   @page { margin: 14mm; }
 }
+
+/* CityPASS Intro CTA Button & Tip Links */
+.citypass-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.2rem;
+  background: linear-gradient(135deg, var(--ink-2), #1e293b);
+  color: var(--brass-light);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 700;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s var(--ease-spring), box-shadow 0.3s, border-color 0.3s;
+}
+
+.citypass-cta-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+  border-color: var(--brass);
+  color: var(--white);
+}
+
+.tip-card p a, .chip-list li a {
+  color: var(--brick);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: rgba(192, 57, 43, 0.4);
+  text-underline-offset: 2px;
+  transition: color 0.3s, text-decoration-color 0.3s;
+}
+
+.tip-card p a:hover, .chip-list li a:hover {
+  color: var(--brass);
+  text-decoration-color: var(--brass);
+}
+
+.feature.dark .chip-list li a {
+  color: var(--brass-light);
+  text-decoration-color: rgba(240, 216, 120, 0.4);
+}
+
+.feature.dark .chip-list li a:hover {
+  color: var(--brass);
+}
+
