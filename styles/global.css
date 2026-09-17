@@ -149,6 +149,27 @@ img {
   gap: .5rem;
 }
 
+.topnav .cta-nav {
+  margin-left: auto;
+  background: linear-gradient(135deg, var(--brass), var(--brass-light));
+  color: var(--ink) !important;
+  font-weight: 700;
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  transition: transform 0.3s var(--ease-spring), box-shadow 0.3s !important;
+}
+
+.topnav .cta-nav:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
+}
+
+.topnav .cta-nav::after {
+  display: none !important;
+}
+
+
 /* Footer */
 footer {
   background: var(--ink);

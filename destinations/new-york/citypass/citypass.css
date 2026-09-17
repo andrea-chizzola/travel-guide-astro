@@ -1,0 +1,371 @@
+/* CityPASS Guide Specific Styles */
+
+/* Topnav styling for standalone guide */
+.topnav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: rgba(7, 11, 20, 0.95);
+  backdrop-filter: blur(20px) saturate(1.8);
+  -webkit-backdrop-filter: blur(20px) saturate(1.8);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 0;
+  overflow-x: auto;
+  padding: 0 1.5rem;
+}
+
+.topnav a {
+  display: inline-block;
+  white-space: nowrap;
+  color: var(--cream);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 1.1rem 0.9rem;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.topnav a:hover {
+  color: var(--brass-light);
+}
+
+.topnav .cta-nav {
+  margin-left: auto;
+  background: linear-gradient(135deg, var(--brass), var(--brass-light));
+  color: var(--ink) !important;
+  font-weight: 700;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  border-bottom: none !important;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.topnav .cta-nav:hover {
+  box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Hero & Stat Row Spacing for CityPASS */
+.hero {
+  min-height: 60vh !important;
+  align-items: center !important;
+}
+
+.hero-inner {
+  padding-bottom: 5rem !important;
+}
+
+.stat-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 5;
+}
+
+.stat-chip {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: linear-gradient(135deg, var(--brass), var(--brass-light));
+  padding: 0.6rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.intro-section {
+  margin-top: -2.5rem !important;
+}
+
+
+/* Attraction Grid */
+.attraction-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+
+@media (max-width: 680px) {
+  .attraction-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.attraction-card {
+  background: var(--white);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-left: 4px solid var(--brick);
+  border-radius: 4px;
+  padding: 1.4rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.attraction-card h4 {
+  font-family: 'Big Shoulders Display', sans-serif;
+  text-transform: uppercase;
+  color: var(--ink);
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+}
+
+.attraction-card p {
+  font-size: 0.92rem;
+  color: var(--text-soft);
+  margin: 0;
+}
+
+.attraction-card .req {
+  display: inline-block;
+  margin-top: 0.7rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brick);
+  font-weight: 700;
+}
+
+/* Pricing Table */
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-family: 'Source Serif 4', serif;
+}
+
+.price-table th, .price-table td {
+  padding: 1rem 1.2rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.price-table th {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brass-light);
+}
+
+.price-table td {
+  font-size: 1rem;
+}
+
+.price-table .save {
+  color: var(--brass-light);
+  font-weight: 700;
+}
+
+.fee-note {
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+  color: var(--ink);
+  font-style: italic;
+}
+
+/* Step-by-Step App Reservation Flow & Phone Mockups */
+.step {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 2.5rem;
+  align-items: center;
+  margin-bottom: 3.5rem;
+}
+
+.step:nth-child(even) {
+  grid-template-columns: 260px 1fr;
+}
+
+.step:nth-child(even) .step-text {
+  order: 2;
+}
+
+.step:nth-child(even) .step-phone {
+  order: 1;
+}
+
+@media (max-width: 720px) {
+  .step, .step:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+  .step:nth-child(even) .step-text,
+  .step:nth-child(even) .step-phone {
+    order: initial;
+  }
+}
+
+.step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--brass), var(--brass-light));
+  color: var(--ink);
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.step-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.step-text p {
+  color: var(--text-soft);
+  font-size: 0.98rem;
+}
+
+.phone {
+  width: 220px;
+  margin: 0 auto;
+  border-radius: 28px;
+  background: var(--ink-2);
+  padding: 10px;
+  box-shadow: var(--shadow-lg);
+  border: 2px solid rgba(212, 175, 55, 0.3);
+}
+
+.phone-screen {
+  background: var(--cream);
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-bar {
+  background: var(--ink);
+  color: var(--brass-light);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.6rem 0.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.phone-body {
+  padding: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex: 1;
+}
+
+.phone-body .ph-title {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 0.2rem;
+}
+
+.phone-body .ph-line {
+  height: 10px;
+  border-radius: 3px;
+  background: rgba(192, 57, 43, 0.12);
+}
+
+.phone-body .ph-line.w60 { width: 60%; }
+.phone-body .ph-line.w80 { width: 80%; }
+.phone-body .ph-line.w40 { width: 40%; }
+
+.phone-body .ph-card {
+  background: var(--white);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 6px;
+  padding: 0.6rem 0.7rem;
+  font-size: 0.62rem;
+  color: var(--text-soft);
+  font-family: 'Space Mono', monospace;
+}
+
+.phone-body .ph-btn {
+  margin-top: auto;
+  background: linear-gradient(135deg, var(--brick), #a5311f);
+  color: #fff;
+  text-align: center;
+  padding: 0.6rem;
+  border-radius: 999px;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.mockup-note {
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px dashed rgba(212, 175, 55, 0.4);
+  border-radius: 4px;
+  padding: 1rem 1.3rem;
+  font-size: 0.92rem;
+  color: var(--text-soft);
+  margin-bottom: 2.5rem;
+}
+
+/* FAQ */
+.faq {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.faq-item {
+  background: var(--cream-2);
+  border-left: 3px solid var(--brass);
+  border-radius: 4px;
+  padding: 1.2rem 1.4rem;
+}
+
+.faq-item h4 {
+  font-family: 'Big Shoulders Display', sans-serif;
+  text-transform: uppercase;
+  color: var(--ink);
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.faq-item p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+}
+
+/* Standalone Footer Back Link */
+footer a.back {
+  display: inline-block;
+  margin-top: 1.6rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brass-light);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.4);
+  padding-bottom: 2px;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+footer a.back:hover {
+  color: var(--white);
+  border-color: var(--brass-light);
+}
